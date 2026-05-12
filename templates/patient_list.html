@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% block content %}
+<section class="hero-section">
+    <div class="container">
+        <div class="row mb-4">
+            <div class="col-lg-8 mx-auto text-center">
+                <h2 class="section-title">Bemorlar ro‘yxati</h2>
+                <p class="text-muted">Kiritilgan bemor ma’lumotlarini bu yerda ko‘rishingiz mumkin.</p>
+            </div>
+        </div>
+        <div class="row">
+            {% if patients %}
+                {% for patient in patients %}
+                <div class="col-md-4 mb-4">
+                    <div class="card shadow-sm border-0 p-4">
+                        <h5>{{ patient.full_name }}</h5>
+                        <p class="text-muted">{{ patient.phone }}</p>
+                        <p>{{ patient.email|default:'E-pochta kiritilmagan' }}</p>
+                        <p><small>{{ patient.birth_date|default:'Tug‘ilgan sana mavjud emas' }}</small></p>
+                    </div>
+                </div>
+                {% endfor %}
+            {% else %}
+                <div class="col-12">
+                    <div class="alert alert-info text-center">Hozircha bemorlar mavjud emas.</div>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% block content %}
+<section class="hero-section">
+    <div class="container">
+        <div class="row mb-4">
+            <div class="col-lg-8 mx-auto text-center">
+                <h2 class="section-title">To‘lovlar</h2>
+                <p class="text-muted">Navbatlar bilan bog‘liq to‘lov holatini tekshiring.</p>
+            </div>
+        </div>
+        <div class="row">
+            {% if payments %}
+                {% for payment in payments %}
+                <div class="col-md-6 mb-4">
+                    <div class="card shadow-sm border-0 p-4">
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <div>
+                                <h5>{{ payment.appointment.patient.full_name }}</h5>
+                                <p class="text-muted mb-0">{{ payment.appointment.doctor.full_name }} - {{ payment.appointment.service.title }}</p>
+                            </div>
+                            <span class="badge bg-{{ payment.badge_class }}">{{ payment.get_status_display }}</span>
+                        </div>
+                        <p><strong>Summasi:</strong> {{ payment.amount }} UZS</p>
+                        <p><strong>Sana:</strong> {{ payment.created_at|date:'Y-m-d H:i' }}</p>
+                    </div>
+                </div>
+                {% endfor %}
+            {% else %}
+                <div class="col-12">
+                    <div class="alert alert-info text-center">Hozircha to‘lovlar yozuvi mavjud emas.</div>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+</section>
+{% endblock %}

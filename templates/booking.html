@@ -1,0 +1,74 @@
+{% extends 'base.html' %}
+{% block content %}
+<section class="hero-section">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <h2 class="section-title text-center">Onlayn navbatga yozilish</h2>
+                <p class="text-center text-muted mb-4">Eng yaqin stomatologik vaqtni tanlang va bemalol ro‘yxatdan o‘ting.</p>
+                <div class="card shadow-sm border-0 p-4">
+                    <form method="post" novalidate>
+                        {% csrf_token %}
+                        {{ form.non_field_errors }}
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label class="form-label">Ism</label>
+                                {{ form.first_name }}
+                                {{ form.first_name.errors }}
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Familiya</label>
+                                {{ form.last_name }}
+                                {{ form.last_name.errors }}
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Telefon</label>
+                                {{ form.phone }}
+                                {{ form.phone.errors }}
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">E-pochta</label>
+                                {{ form.email }}
+                                {{ form.email.errors }}
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Tug‘ilgan sana</label>
+                                {{ form.birth_date }}
+                                {{ form.birth_date.errors }}
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Stomatolog</label>
+                                {{ form.doctor }}
+                                {{ form.doctor.errors }}
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Xizmat</label>
+                                {{ form.service }}
+                                {{ form.service.errors }}
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Sana</label>
+                                {{ form.appointment_date }}
+                                {{ form.appointment_date.errors }}
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Vaqt</label>
+                                {{ form.time_slot }}
+                                {{ form.time_slot.errors }}
+                            </div>
+                            <div class="col-12">
+                                <label class="form-label">Izoh</label>
+                                {{ form.notes }}
+                                {{ form.notes.errors }}
+                            </div>
+                        </div>
+                        <div class="text-center mt-4">
+                            <button type="submit" class="btn btn-primary btn-lg px-5">Navbatga yozilish</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

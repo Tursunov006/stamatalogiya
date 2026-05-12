@@ -1,0 +1,179 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<!-- HERO SECTION -->
+<section class="hero-section" data-aos="fade-up">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-12 text-center" data-aos="fade-up">
+                <h1 class="hero-title">
+                    Stomatologiya Klinikasiga <span class="highlight">Xush Kelibsiz!</span>
+                </h1>
+                <p class="hero-text">
+                    Sizning tabassumingiz - bizning ishimiz! Eng zamonaviy uskunalar va tajribali shifokorlar.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- STATISTIKA SECTION -->
+<section class="stats-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3" data-aos="zoom-in" data-aos-delay="100">
+                <div class="stat-card">
+                    <i class="fas fa-user-md"></i>
+                    <div class="stat-number" data-target="15">15</div>
+                    <div class="stat-label">Doktorlar</div>
+                </div>
+            </div>
+            <div class="col-md-3" data-aos="zoom-in" data-aos-delay="200">
+                <div class="stat-card">
+                    <i class="fas fa-briefcase-medical"></i>
+                    <div class="stat-number" data-target="25">25</div>
+                    <div class="stat-label">Xizmatlar</div>
+                </div>
+            </div>
+            <div class="col-md-3" data-aos="zoom-in" data-aos-delay="300">
+                <div class="stat-card">
+                    <i class="fas fa-calendar-check"></i>
+                    <div class="stat-number" data-target="124">124</div>
+                    <div class="stat-label">Bugungi Qabullar</div>
+                </div>
+            </div>
+            <div class="col-md-3" data-aos="zoom-in" data-aos-delay="400">
+                <div class="stat-card">
+                    <i class="fas fa-users"></i>
+                    <div class="stat-number" data-target="2481">2481</div>
+                    <div class="stat-label">Bemorlar</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- TEZKOR AMALLAR SECTION -->
+<section class="actions-section">
+    <div class="container">
+        <h2 class="section-title text-center" data-aos="fade-up">
+            Tezkor Amallar
+        </h2>
+        
+        <div class="row mt-5">
+            <div class="col-md-3" data-aos="flip-left" data-aos-delay="100">
+                <div class="action-card">
+                    <div class="action-icon">
+                        <i class="fas fa-user-plus"></i>
+                    </div>
+                    <h3>Yangi Bemor</h3>
+                    <button class="btn btn-action" onclick="showNotification('Yangi bemor qo\'shish formasi ochildi')">
+                        <i class="fas fa-plus-circle"></i> Qo'shish
+                    </button>
+                </div>
+            </div>
+            
+            <div class="col-md-3" data-aos="flip-left" data-aos-delay="200">
+                <div class="action-card">
+                    <div class="action-icon">
+                        <i class="fas fa-calendar-plus"></i>
+                    </div>
+                    <h3>Navbatga Yozish</h3>
+                    <button class="btn btn-action" onclick="showNotification('Navbatga yozish formasi ochildi')">
+                        <i class="fas fa-pen"></i> Yozish
+                    </button>
+                </div>
+            </div>
+            
+            <div class="col-md-3" data-aos="flip-left" data-aos-delay="300">
+                <div class="action-card">
+                    <div class="action-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>Qabul Vaqtlari</h3>
+                    <button class="btn btn-action" onclick="showNotification('Qabul vaqtlari jadvali ochildi')">
+                        <i class="fas fa-eye"></i> Ko'rish
+                    </button>
+                </div>
+            </div>
+            
+            <div class="col-md-3" data-aos="flip-left" data-aos-delay="400">
+                <div class="action-card">
+                    <div class="action-icon">
+                        <i class="fas fa-chart-bar"></i>
+                    </div>
+                    <h3>Hisobotlar</h3>
+                    <button class="btn btn-action" onclick="showNotification('Hisobotlar paneli ochildi')">
+                        <i class="fas fa-eye"></i> Ko'rish
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- XIZMATLAR SECTION -->
+<section class="services-section">
+    <div class="container">
+        <h2 class="section-title text-center" data-aos="fade-up">
+            Xizmatlarimiz
+        </h2>
+        
+        <div class="row mt-5">
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                <div class="service-card">
+                    <i class="fas fa-tooth"></i>
+                    <h4>Tish tozalash</h4>
+                    <p>Professional tish tozalash va parodontologiya</p>
+                </div>
+            </div>
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                <div class="service-card">
+                    <i class="fas fa-crown"></i>
+                    <h4>Implantatsiya</h4>
+                    <p>Zamonaviy implantlar o'rnatish</p>
+                </div>
+            </div>
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+                <div class="service-card">
+                    <i class="fas fa-teeth"></i>
+                    <h4>Ortodontiya</h4>
+                    <p>Brakets va ortodontik davolash</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- OXIRGI NAVBATLAR SECTION -->
+<section class="recent-appointments-section">
+    <div class="container">
+        <h2 class="section-title text-center" data-aos="fade-up">
+            Oxirgi navbatlar
+        </h2>
+        
+        <div class="row mt-5">
+            {% for appointment in recent_appointments %}
+            <div class="col-md-6 mb-4" data-aos="fade-up" data-aos-delay="{{ forloop.counter|mul:100 }}">
+                <div class="card shadow-sm border-0 p-4">
+                    <div class="d-flex justify-content-between align-items-start mb-3">
+                        <div>
+                            <h5 class="mb-1">{{ appointment.patient.full_name }}</h5>
+                            <span class="text-muted">{{ appointment.doctor.full_name }} - {{ appointment.service.title }}</span>
+                        </div>
+                        <span class="badge bg-{{ appointment.status_badge }}">{{ appointment.get_status_display }}</span>
+                    </div>
+                    <div class="row">
+                        <div class="col-6"><strong>Sana:</strong> {{ appointment.appointment_date }}</div>
+                        <div class="col-6"><strong>Vaqt:</strong> {{ appointment.time_slot }}</div>
+                    </div>
+                </div>
+            </div>
+            {% empty %}
+            <div class="col-12">
+                <div class="alert alert-info text-center">Hozircha navbatlar mavjud emas.</div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
